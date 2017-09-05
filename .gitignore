@@ -2,5 +2,8 @@
 *.tfstate
 *.tfstate.backup
 
+# Variables
+*.tfvars
+
 # Module directory
 .terraform/
