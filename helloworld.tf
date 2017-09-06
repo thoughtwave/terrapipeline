@@ -8,12 +8,12 @@ provider "openstack" {
 
 resource "openstack_compute_instance_v2" "www" {
   name = "www"
-  image_id   = "e28ba5de-9b3b-4867-8fb4-3dbc8c9c79a9"
+  image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
 }
 
 resource "openstack_compute_instance_v2" "db" {
   name = "db"
-  image_id   = "e28ba5de-9b3b-4867-8fb4-3dbc8c9c79a9"
+  image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
 }
