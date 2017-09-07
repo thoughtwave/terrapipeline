@@ -37,7 +37,7 @@ resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_2" {
   security_group_id = "${openstack_networking_secgroup_v2.admins_sg.id}"
 }
 
-resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_2" {
+resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_3" {
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
@@ -48,7 +48,7 @@ resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_2" {
 }
 
 
-resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_3" {
+resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_4" {
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
@@ -58,7 +58,7 @@ resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_3" {
   security_group_id = "${openstack_networking_secgroup_v2.admins_sg.id}"
 }
 
-resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_4" {
+resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_5" {
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
@@ -68,7 +68,7 @@ resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_4" {
   security_group_id = "${openstack_networking_secgroup_v2.admins_sg.id}"
 }
 
-resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_5" {
+resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_6" {
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
