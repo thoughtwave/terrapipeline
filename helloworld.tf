@@ -25,3 +25,13 @@ resource "openstack_compute_instance_v2" "db" {
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
 }
+
+resource "openstack_compute_floatingip_associate_v2" "www_ip" {
+  floating_ip = "${openstack_networking_floatingip_v2.www_ip.address}"
+  instance_id = "${openstack_compute_instance_v2.www.id}"
+}
+
+resource "openstack_compute_floatingip_associate_v2" "db_ip" {
+  floating_ip = "${openstack_networking_floatingip_v2.db_ip.address}"
+  instance_id = "${openstack_compute_instance_v2.db.id}"
+}
