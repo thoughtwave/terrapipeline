@@ -12,7 +12,7 @@ resource "openstack_compute_keypair_v2" "jonny" {
 }
 
 resource "openstack_networking_secgroup_v2" "admins_sg" {
-  name        = "admins"
+  name        = "admins_sg"
   description = "Admin access levels"
 }
 
