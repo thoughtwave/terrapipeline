@@ -24,12 +24,14 @@ resource "openstack_compute_instance_v2" "www" {
   name = "www"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
+  key_pair        = "jonny"
 }
 
 resource "openstack_compute_instance_v2" "db" {
   name = "db"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
+  key_pair        = "jonny"
 }
 
 resource "openstack_compute_floatingip_associate_v2" "www_ip" {
