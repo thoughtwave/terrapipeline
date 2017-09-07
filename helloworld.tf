@@ -26,12 +26,12 @@ resource "openstack_compute_instance_v2" "db" {
   flavor_name   = "c1.large"
 }
 
-resource "openstack_compute_floatingip_associate_v2" "www_ip" {
-  floating_ip = "${openstack_networking_floatingip_v2.www_ip.address}"
-  instance_id = "${openstack_compute_instance_v2.www.id}"
-}
-
-resource "openstack_compute_floatingip_associate_v2" "db_ip" {
-  floating_ip = "${openstack_networking_floatingip_v2.db_ip.address}"
-  instance_id = "${openstack_compute_instance_v2.db.id}"
-}
+#resource "openstack_compute_floatingip_associate_v2" "www_ip" {
+#  floating_ip = "${openstack_networking_floatingip_v2.www_ip.address}"
+#  instance_id = "${openstack_compute_instance_v2.www.id}"
+#}
+#
+#resource "openstack_compute_floatingip_associate_v2" "db_ip" {
+#  floating_ip = "${openstack_networking_floatingip_v2.db_ip.address}"
+#  instance_id = "${openstack_compute_instance_v2.db.id}"
+#}
