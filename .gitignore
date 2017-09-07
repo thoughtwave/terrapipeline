@@ -7,3 +7,6 @@
 
 # Module directory
 .terraform/
+
+# Password files
+*.openrc
