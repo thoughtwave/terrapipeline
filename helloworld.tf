@@ -46,7 +46,7 @@ resource "openstack_compute_instance_v2" "www" {
 
 resource "openstack_compute_instance_v2" "db" {
   name = "db"
-  image_id   = "de70a565-f498-4a5f-8ad1-cfe1572463b0"
+  image_id   = "0caa2036-595d-4e5b-b72a-4ce2f25b2a84"
   flavor_name   = "c1.large"
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
