@@ -37,17 +37,6 @@ resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_2" {
   security_group_id = "${openstack_networking_secgroup_v2.admins_sg.id}"
 }
 
-resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_3" {
-  direction         = "ingress"
-  ethertype         = "IPv4"
-  protocol          = "tcp"
-  port_range_min    = 9042
-  port_range_max    = 9042
-  remote_ip_prefix  = "199.188.96.62/32"
-  security_group_id = "${openstack_networking_secgroup_v2.admins_sg.id}"
-}
-
-
 resource "openstack_networking_secgroup_rule_v2" "admins_sg_rule_4" {
   direction         = "ingress"
   ethertype         = "IPv4"
