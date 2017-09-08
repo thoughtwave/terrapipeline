@@ -91,13 +91,13 @@ resource "openstack_compute_instance_v2" "www" {
   security_groups = ["default","admins_sg"]
 }
 
-#resource "openstack_compute_instance_v2" "db" {
-#  name = "db"
-#  image_id   = "13a04a40-82dd-42b6-bdc4-dcc838b7dd97"
-#  flavor_name   = "m1.small"
-#  key_pair        = "jonny"
-#  security_groups = ["default","admins_sg"]
-#}
+resource "openstack_compute_instance_v2" "db" {
+  name = "db"
+  image_id   = "13a04a40-82dd-42b6-bdc4-dcc838b7dd97"
+  flavor_name   = "m1.small"
+  key_pair        = "jonny"
+  security_groups = ["default","admins_sg"]
+}
 #
 #resource "openstack_compute_instance_v2" "db2" {
 #  name = "db2"
