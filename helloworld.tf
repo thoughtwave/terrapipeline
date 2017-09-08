@@ -120,17 +120,17 @@ resource "openstack_compute_floatingip_associate_v2" "www_ip" {
   instance_id = "${openstack_compute_instance_v2.www.id}"
 }
 
-resource "openstack_compute_floatingip_associate_v2" "db_ip" {
-  floating_ip = "${openstack_networking_floatingip_v2.db_ip.address}"
-  instance_id = "${openstack_compute_instance_v2.db.id}"
-}
-
-resource "openstack_compute_floatingip_associate_v2" "db2_ip" {
-  floating_ip = "${openstack_networking_floatingip_v2.db2_ip.address}"
-  instance_id = "${openstack_compute_instance_v2.db2.id}"
-}
-
-resource "openstack_compute_floatingip_associate_v2" "db3_ip" {
-  floating_ip = "${openstack_networking_floatingip_v2.db3_ip.address}"
-  instance_id = "${openstack_compute_instance_v2.db3.id}"
-}
+#resource "openstack_compute_floatingip_associate_v2" "db_ip" {
+#  floating_ip = "${openstack_networking_floatingip_v2.db_ip.address}"
+#  instance_id = "${openstack_compute_instance_v2.db.id}"
+#}
+#
+#resource "openstack_compute_floatingip_associate_v2" "db2_ip" {
+#  floating_ip = "${openstack_networking_floatingip_v2.db2_ip.address}"
+#  instance_id = "${openstack_compute_instance_v2.db2.id}"
+#}
+#
+#resource "openstack_compute_floatingip_associate_v2" "db3_ip" {
+#  floating_ip = "${openstack_networking_floatingip_v2.db3_ip.address}"
+#  instance_id = "${openstack_compute_instance_v2.db3.id}"
+#}
