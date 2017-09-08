@@ -98,6 +98,7 @@ resource "openstack_compute_instance_v2" "db" {
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
 }
+
 #
 #resource "openstack_compute_instance_v2" "db2" {
 #  name = "db2"
