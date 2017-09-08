@@ -123,7 +123,7 @@ resource "cloudflare_record" "db3" {
 resource "openstack_compute_instance_v2" "www" {
   name = "www"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
-  flavor_name   = "m1.small"
+  flavor_name   = "c1.large"
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
   user_data = "${file("user_data_www")}"
@@ -133,7 +133,7 @@ resource "openstack_compute_instance_v2" "www" {
 resource "openstack_compute_instance_v2" "db" {
   name = "db"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
-  flavor_name   = "m1.small"
+  flavor_name   = "c1.large"
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
   user_data = "${file("user_data_db")}"
@@ -142,7 +142,7 @@ resource "openstack_compute_instance_v2" "db" {
 resource "openstack_compute_instance_v2" "db2" {
   name = "db2"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
-  flavor_name   = "m1.small"
+  flavor_name   = "c1.large"
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
   user_data = "${file("user_data_db")}"
@@ -151,7 +151,7 @@ resource "openstack_compute_instance_v2" "db2" {
 resource "openstack_compute_instance_v2" "db3" {
   name = "db3"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
-  flavor_name   = "m1.small"
+  flavor_name   = "c1.large"
   key_pair        = "jonny"
   security_groups = ["default","admins_sg"]
   user_data = "${file("user_data_db")}"
