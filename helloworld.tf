@@ -11,9 +11,9 @@ provider "cloudflare" {
   token = "${var.cloudflare_token}"
 }
 
-resource "openstack_compute_keypair_v2" "jonny" {
-  name       = "jonny"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YTga0O/sPZNPPm76R1uSGsXG8HdzSOhaTW8R0sUjmQncTOICkBT1j2nOTzJQHprQB87cdO58fiV3Gox0D5WQH3QIa46AiKY8yiz6exedNVfQWSd1leob8pM8rXWrEz6jLGgMxL8r5l+ipmAW0Db/AqNyT4pWAHt9GLzw9ack6aSxQxXRY/qQQyezrVrLAh5tKxjcCquhWQgTNM1l+T2GVohgJzUBycdAuki/tHPjQKG+Ru9+UlogG+spBBKf6eJnXTz+X2j3alI1DayFiBEtsCasA0+8rp7a5OLeQ/3kooiLW8Rf+e9bB/NUnH03J6BuvPCAxPH316z2IKt4ufvz jonny"
+resource "openstack_compute_keypair_v2" "jonny2" {
+  name       = "jonny2"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YTga0O/sPZNPPm76R1uSGsXG8HdzSOhaTW8R0sUjmQncTOICkBT1j2nOTzJQHprQB87cdO58fiV3Gox0D5WQH3QIa46AiKY8yiz6exedNVfQWSd1leob8pM8rXWrEz6jLGgMxL8r5l+ipmAW0Db/AqNyT4pWAHt9GLzw9ack6aSxQxXRY/qQQyezrVrLAh5tKxjcCquhWQgTNM1l+T2GVohgJzUBycdAuki/tHPjQKG+Ru9+UlogG+spBBKf6eJnXTz+X2j3alI1DayFiBEtsCasA0+8rp7a5OLeQ/3kooiLW8Rf+e9bB/NUnH03J6BuvPCAxPH316z2IKt4ufvz jonny2"
 }
 
 resource "openstack_networking_secgroup_v2" "demo_sg" {
@@ -124,7 +124,7 @@ resource "openstack_compute_instance_v2" "www" {
   name = "www"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
-  key_pair        = "jonny"
+  key_pair        = "jonny2"
   security_groups = ["default","demo_sg"]
   user_data = "${file("user_data_www")}"
 }
@@ -134,7 +134,7 @@ resource "openstack_compute_instance_v2" "db" {
   name = "db"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
-  key_pair        = "jonny"
+  key_pair        = "jonny2"
   security_groups = ["default","demo_sg"]
   user_data = "${file("user_data_db")}"
 }
@@ -143,7 +143,7 @@ resource "openstack_compute_instance_v2" "db2" {
   name = "db2"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
-  key_pair        = "jonny"
+  key_pair        = "jonny2"
   security_groups = ["default","demo_sg"]
   user_data = "${file("user_data_db")}"
 }
@@ -152,7 +152,7 @@ resource "openstack_compute_instance_v2" "db3" {
   name = "db3"
   image_id   = "9f9d86b7-85f6-48a6-af04-b096dfecee11"
   flavor_name   = "c1.large"
-  key_pair        = "jonny"
+  key_pair        = "jonny2"
   security_groups = ["default","demo_sg"]
   user_data = "${file("user_data_db")}"
 }
